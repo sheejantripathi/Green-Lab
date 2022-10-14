@@ -1,0 +1,4 @@
+echo global > /sys/kernel/debug/tracing/trace_clock
+echo 1 > /sys/kernel/debug/tracing/options/overwrite
+echo "" > /sys/kernel/debug/tracing/trace # clear ring buffer
+echo 1 > /sys/kernel/debug/tracing/events/sched/sched_switch/enable

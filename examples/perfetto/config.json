@@ -1,7 +1,11 @@
 {
   "type": "native",
   "devices": {
-    "pixel3": {}
+    "nokia": {
+      "root_disable_charging": "True",
+      "charging_disabled_value": 0,
+      "usb_charging_disabled_file": "/sys/class/power_supply/usb/device/charge"
+    }
   },
   "repetitions": 5,
   "duration": 6000,
@@ -11,8 +15,8 @@
   ],
   "profilers": {
     "perfetto": {
-        "config_file" : "examples/perfetto/memory_perfetto.bin",
-	"config_file_format" : "binary"
+        "config_file" : "/home/pi/android-runner/examples/perfetto/trace_config.txpb",
+	"config_file_format" : "pbtx"
     } 
   },
   "scripts": {

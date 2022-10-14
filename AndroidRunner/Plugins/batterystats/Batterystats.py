@@ -80,7 +80,7 @@ class Batterystats(Profiler):
         global sysproc
 
         # Run systrace in another thread.
-        cmd = '{} freq idle -e {} -a {} -o {}'.format(self.systrace, device.id, application,
+        cmd = '{} freq idle -b 81920 -e {} -a {} -o {}'.format(self.systrace, device.id, application,
                                                           systrace_file) 
         cmd = cmd.split()
         sysproc = subprocess.Popen(cmd, stdin=subprocess.PIPE)

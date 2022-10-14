@@ -278,6 +278,17 @@ def get_screen_intensity(brightness, power_profile):
 
 
 def calculate_energy_usage(intensity, voltage, duration):
+    ##### OUR CHANGES #####
+    if intensity is None:
+        print('Sx5 - Intensity is None')
+        intensity = 1
+    if voltage is None:
+        print('Sx5 - Voltage is None')
+        voltage = 1
+    if duration is None:
+        print('Sx5 - Duration is None')
+        duration = 1
+    ##### OUR CHANGES #####
     return intensity * voltage * duration
 
 
