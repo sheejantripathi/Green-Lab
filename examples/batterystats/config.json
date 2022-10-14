@@ -14,7 +14,8 @@
   ],
   "profilers": {
     "batterystats": {
-      "cleanup": true 
+      "cleanup": true,
+      "python2_path": "python_2"
     }
   },
   "scripts": {
